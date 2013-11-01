@@ -119,14 +119,14 @@ static void tmate_header(struct tmate_decoder *decoder,
 	if (gethostname(hostname, sizeof(hostname)) < 0)
 		tmate_fatal("cannot get hostname");
 
-	tmate_notify("Remote session read only: ssh %s ro-%s@%s.%s (clear your screen if you share this)",
-				 (TMATE_DEFAULT_PORT != 22 ? '' : "-pTMATE_DEFAULT_PORT"),
+	tmate_notify("Remote session read only: ssh %d ro-%s@%s.%s (clear your screen if you share this)",
+				 (TMATE_DEFAULT_PORT != 22 ? '' : TMATE_DEFAULT_PORT),
 		     tmate_session_token_ro,
 		     hostname,
 		     TMATE_DOMAIN);
 
-	tmate_notify("Remote session: ssh %s %s@%s.%s",
-				 (TMATE_DEFAULT_PORT != 22 ? '' : "-pTMATE_DEFAULT_PORT"),
+	tmate_notify("Remote session: ssh %d %s@%s.%s",
+				 (TMATE_DEFAULT_PORT != 22 ? '' : TMATE_DEFAULT_PORT),
 		     tmate_session_token,
 		     hostname,
 		     TMATE_DOMAIN);
