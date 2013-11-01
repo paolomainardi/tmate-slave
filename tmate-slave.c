@@ -18,7 +18,7 @@
 #include "tmate.h"
 
 int tmate_port = TMATE_DEFAULT_PORT;
-char tmate_host[TMATE_DOMAIN_MAX] = TMATE_DOMAIN;
+const char *tmate_domain = TMATE_DOMAIN
 
 struct tmate_encoder *tmate_encoder;
 int tmux_socket_fd;
@@ -92,7 +92,7 @@ int main(int argc, char **argv, char **envp)
 #endif
 			break;
 		case 'h':
-			tmate_host = optarg;
+			tmate_domain = optarg;
 			break;
 		default:
 			usage();
