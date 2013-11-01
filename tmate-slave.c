@@ -70,7 +70,7 @@ int main(int argc, char **argv, char **envp)
 	const char *replay_file = NULL;
 #endif
 
-	while ((opt = getopt(argc, argv, "p:l:vk:r:")) != -1) {
+	while ((opt = getopt(argc, argv, "p:l:vk:r:h:")) != -1) {
 		switch (opt) {
 		case 'p':
 			tmate_port = atoi(optarg);
