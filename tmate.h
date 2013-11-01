@@ -19,7 +19,7 @@ do {							\
 } while (0)
 
 /* tmate-encoder.c */
-
+#define TMATE_DOMAIN_MAX 128
 #define TMATE_LATEST_VERSION "1.8.9"
 #define TMATE_DOMAIN "tmate.io"
 
