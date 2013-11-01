@@ -163,9 +163,9 @@ extern void tmate_ssh_server_main(const char *keys_dir, int port);
 extern int tmate_port;
 extern struct tmate_encoder *tmate_encoder;
 extern int tmux_socket_fd;
+extern char *tmate_domain;
 extern const char *tmate_session_token;
 extern const char *tmate_session_token_ro;
-extern const char *tmate_domain;
 
 extern void tmate_get_random_bytes(void *buffer, ssize_t len);
 extern long tmate_get_random_long(void);
