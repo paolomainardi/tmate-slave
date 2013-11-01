@@ -18,7 +18,9 @@
 #include "tmate.h"
 
 int tmate_port = TMATE_DEFAULT_PORT;
+printf('%s', TMATE_DOMAIN);
 char *tmate_domain = TMATE_DOMAIN;
+printf('%s', tmate_domain);
 
 struct tmate_encoder *tmate_encoder;
 int tmux_socket_fd;
