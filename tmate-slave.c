@@ -19,7 +19,6 @@
 
 int tmate_port = TMATE_DEFAULT_PORT;
 char *tmate_domain = TMATE_DOMAIN;
-printf('%s', tmate_domain);
 
 struct tmate_encoder *tmate_encoder;
 int tmux_socket_fd;
@@ -93,7 +92,7 @@ int main(int argc, char **argv, char **envp)
 #endif
 			break;
 		case 'h':
-			tmate_domain = optarg;
+			tmate_domain = xstrdup(optarg);
 			break;
 		default:
 			usage();
